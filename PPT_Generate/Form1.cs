@@ -15,6 +15,80 @@ namespace PPT_Generate
         public Form()
         {
             InitializeComponent();
+            this.groupBox_welcome.Hide();
+            this.groupBox_welcome.Show();
+            this.groupBox_text.Hide();
+            this.groupBox_images.Hide();
+            this.groupBox_output.Hide();
+        }
+
+        private void Button_next1_Click(object sender, EventArgs e)
+        {
+            this.groupBox_welcome.Hide();
+            this.groupBox_text.Show();
+            this.groupBox_images.Hide();
+            this.groupBox_output.Hide();
+        }
+
+        private void Button_next2_Click(object sender, EventArgs e)
+        {
+            this.groupBox_welcome.Hide();
+            this.groupBox_text.Hide();
+            this.groupBox_images.Show();
+            this.groupBox_output.Hide();
+        }
+        private void Button_next3_Click(object sender, EventArgs e)
+        {
+            this.groupBox_welcome.Hide();
+            this.groupBox_text.Hide();
+            this.groupBox_images.Hide();
+            this.groupBox_output.Show();
+        }
+
+        private void Button_create_Click(object sender, EventArgs e)
+        {
+            //PPTtext
+            PPTtitle = this.textBox_title.Text;
+            //PPTimages
+            outputName = this.textBox_output_name.Text;
+            outputFolder = this.textBox_output_folder.Text;
+
+
+            MessageBox.Show("Created PowerPoint. Closing...");
+            this.Close();
+        }
+        private void Button_previous3_Click(object sender, EventArgs e)
+        {
+            this.groupBox_welcome.Hide();
+            this.groupBox_text.Show();
+            this.groupBox_images.Hide();
+            this.groupBox_output.Hide();
+        }
+
+        private void Button_previous4_Click(object sender, EventArgs e)
+        {
+            this.groupBox_welcome.Hide();
+            this.groupBox_text.Hide();
+            this.groupBox_images.Show();
+            this.groupBox_output.Hide();
+        }
+
+        private void Button_bold_Click(object sender, EventArgs e)
+        {
+            this.textBox_text.SelectionFont = new Font("Microsoft Sans Serif", 9, FontStyle.Bold);
+        }
+
+        private void Button_browse_output_folder_Click(object sender, EventArgs e)
+        {
+            using (var fbd = new FolderBrowserDialog())
+            {
+                DialogResult result = fbd.ShowDialog();
+
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+                    this.textBox_output_folder.Text = fbd.SelectedPath;
+                }
+            }
         }
     }
 }

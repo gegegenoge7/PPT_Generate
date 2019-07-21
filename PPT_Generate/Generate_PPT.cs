@@ -8,9 +8,9 @@ namespace PPT_Generate
 {
     class Generate_PPT
     {
-        public void Generate(string Title, text, string OutputDirectory, string OutputFilename, string[] imageLinks)
-        {
+        //public void Generate(string Title, text, string OutputDirectory, string OutputFilename, string[] imageLinks)
+        //{
 
-        }
+        //}
     }
 }
