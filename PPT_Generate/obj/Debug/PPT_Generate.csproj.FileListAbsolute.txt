@@ -1,0 +1,9 @@
+D:\GitHub\PPT_Generate\PPT_Generate\bin\Debug\PPT_Generate.exe.config
+D:\GitHub\PPT_Generate\PPT_Generate\bin\Debug\PPT_Generate.exe
+D:\GitHub\PPT_Generate\PPT_Generate\bin\Debug\PPT_Generate.pdb
+D:\GitHub\PPT_Generate\PPT_Generate\obj\Debug\PPT_Generate.csprojResolveAssemblyReference.cache
+D:\GitHub\PPT_Generate\PPT_Generate\obj\Debug\PPT_Generate.Form.resources
+D:\GitHub\PPT_Generate\PPT_Generate\obj\Debug\PPT_Generate.Properties.Resources.resources
+D:\GitHub\PPT_Generate\PPT_Generate\obj\Debug\PPT_Generate.csproj.GenerateResource.Cache
+D:\GitHub\PPT_Generate\PPT_Generate\obj\Debug\PPT_Generate.exe
+D:\GitHub\PPT_Generate\PPT_Generate\obj\Debug\PPT_Generate.pdb
