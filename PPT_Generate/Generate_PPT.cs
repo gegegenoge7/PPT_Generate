@@ -12,7 +12,7 @@ namespace PPT_Generate
 {
     class Generate_PPT
     {
-        public Generate_PPT(string Title, string text, string FullOutputPath/*, string[] imageLinks,*/)
+        public Generate_PPT(string Title, string text, string FullOutputPath, string[] imageLinks)
         {
 
             Microsoft.Office.Interop.PowerPoint.Application pptApplication = new Microsoft.Office.Interop.PowerPoint.Application();
@@ -35,20 +35,12 @@ namespace PPT_Generate
             objText.Font.Name = "Arial";
             objText.Font.Size = 32;
 
-            //Add text
-            /*
-            Microsoft.Office.Interop.PowerPoint.TextFrame tp = slide.Shapes[2].TextFrame;
-            tp.TextRange.Text = text;
-            foreach (int bold_word in bold_word_number)
-            {
-                tp.TextRange.Words(bold_word, 1).Font.Bold = MsoTriState.msoCTrue;
-            }*/
             Clipboard.SetData(DataFormats.Rtf, text);
             slide.Shapes[2].TextFrame.TextRange.PasteSpecial(PpPasteDataType.ppPasteRTF);
 
 
             //fix
-            /*
+            
             int i = 1;
             foreach (string image in imageLinks)
             {
@@ -67,7 +59,7 @@ namespace PPT_Generate
 
                 }
                 i++;
-            }*/
+            }
             pptPresentation.SaveAs(FullOutputPath, Microsoft.Office.Interop.PowerPoint.PpSaveAsFileType.ppSaveAsDefault, MsoTriState.msoTrue);
             pptPresentation.Close();
             pptApplication.Quit();
