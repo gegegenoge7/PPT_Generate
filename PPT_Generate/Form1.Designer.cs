@@ -344,7 +344,7 @@
         private System.Windows.Forms.Label label_output_folder;
         private System.Windows.Forms.Button button_browse_output_folder;
         private System.Windows.Forms.Label label1;
-        //private PPTtext
+        private string PPTtext;
         private string PPTtitle;
         //private PPTimages
         private string outputFolder;

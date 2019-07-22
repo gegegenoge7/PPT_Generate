@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Office.Interop.PowerPoint;
+using Microsoft.Office.Core;
 
 namespace PPT_Generate
 {
@@ -47,11 +49,18 @@ namespace PPT_Generate
 
         private void Button_create_Click(object sender, EventArgs e)
         {
-            //PPTtext
+            PPTtext = this.textBox_text.Rtf;
             PPTtitle = this.textBox_title.Text;
             //PPTimages
             outputName = this.textBox_output_name.Text;
             outputFolder = this.textBox_output_folder.Text;
+
+            if (!outputName.EndsWith(".pptx"))
+            {
+                outputName += ".pptx";
+            }
+            string output_path = outputFolder + @"/" + outputName;
+            Generate_PPT generate = new Generate_PPT(PPTtitle, PPTtext, output_path);
 
 
             MessageBox.Show("Created PowerPoint. Closing...");
@@ -75,7 +84,7 @@ namespace PPT_Generate
 
         private void Button_bold_Click(object sender, EventArgs e)
         {
-            this.textBox_text.SelectionFont = new Font("Microsoft Sans Serif", 9, FontStyle.Bold);
+            this.textBox_text.SelectionFont = new System.Drawing.Font("Microsoft Sans Serif", 9, FontStyle.Bold);
         }
 
         private void Button_browse_output_folder_Click(object sender, EventArgs e)
