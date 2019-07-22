@@ -60,38 +60,36 @@
             // label_title
             // 
             this.label_title.AutoSize = true;
-            this.label_title.Location = new System.Drawing.Point(23, 60);
-            this.label_title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_title.Location = new System.Drawing.Point(31, 74);
             this.label_title.Name = "label_title";
-            this.label_title.Size = new System.Drawing.Size(99, 13);
+            this.label_title.Size = new System.Drawing.Size(130, 17);
             this.label_title.TabIndex = 0;
             this.label_title.Text = "Title of PowerPoint:";
             // 
             // label_text
             // 
             this.label_text.AutoSize = true;
-            this.label_text.Location = new System.Drawing.Point(22, 108);
-            this.label_text.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_text.Location = new System.Drawing.Point(29, 133);
             this.label_text.Name = "label_text";
-            this.label_text.Size = new System.Drawing.Size(100, 13);
+            this.label_text.Size = new System.Drawing.Size(130, 17);
             this.label_text.TabIndex = 1;
             this.label_text.Text = "Text of PowerPoint:";
             // 
             // textBox_title
             // 
-            this.textBox_title.Location = new System.Drawing.Point(126, 57);
-            this.textBox_title.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_title.Location = new System.Drawing.Point(168, 70);
+            this.textBox_title.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_title.Name = "textBox_title";
-            this.textBox_title.Size = new System.Drawing.Size(390, 20);
+            this.textBox_title.Size = new System.Drawing.Size(519, 22);
             this.textBox_title.TabIndex = 2;
             // 
             // textBox_text
             // 
             this.textBox_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.textBox_text.Location = new System.Drawing.Point(126, 103);
-            this.textBox_text.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_text.Location = new System.Drawing.Point(168, 127);
+            this.textBox_text.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_text.Name = "textBox_text";
-            this.textBox_text.Size = new System.Drawing.Size(390, 234);
+            this.textBox_text.Size = new System.Drawing.Size(519, 287);
             this.textBox_text.TabIndex = 3;
             this.textBox_text.Text = "";
             // 
@@ -104,9 +102,11 @@
             this.groupBox_text.Controls.Add(this.label_text);
             this.groupBox_text.Controls.Add(this.button_next2);
             this.groupBox_text.Controls.Add(this.button_bold);
-            this.groupBox_text.Location = new System.Drawing.Point(12, 12);
+            this.groupBox_text.Location = new System.Drawing.Point(16, 15);
+            this.groupBox_text.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox_text.Name = "groupBox_text";
-            this.groupBox_text.Size = new System.Drawing.Size(555, 383);
+            this.groupBox_text.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox_text.Size = new System.Drawing.Size(740, 471);
             this.groupBox_text.TabIndex = 4;
             this.groupBox_text.TabStop = false;
             this.groupBox_text.Text = "Texts of PowerPoint";
@@ -115,17 +115,19 @@
             // 
             this.label_text_instruction.AutoSize = true;
             this.label_text_instruction.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label_text_instruction.Location = new System.Drawing.Point(23, 27);
+            this.label_text_instruction.Location = new System.Drawing.Point(31, 33);
+            this.label_text_instruction.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_text_instruction.Name = "label_text_instruction";
-            this.label_text_instruction.Size = new System.Drawing.Size(490, 25);
+            this.label_text_instruction.Size = new System.Drawing.Size(639, 29);
             this.label_text_instruction.TabIndex = 7;
             this.label_text_instruction.Text = "Enter the Title and the main Text field of the PowerPoint";
             // 
             // button_next2
             // 
-            this.button_next2.Location = new System.Drawing.Point(462, 342);
+            this.button_next2.Location = new System.Drawing.Point(616, 421);
+            this.button_next2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_next2.Name = "button_next2";
-            this.button_next2.Size = new System.Drawing.Size(75, 23);
+            this.button_next2.Size = new System.Drawing.Size(100, 28);
             this.button_next2.TabIndex = 9;
             this.button_next2.Text = "Next";
             this.button_next2.UseVisualStyleBackColor = true;
@@ -134,9 +136,10 @@
             // button_bold
             // 
             this.button_bold.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_bold.Location = new System.Drawing.Point(91, 194);
+            this.button_bold.Location = new System.Drawing.Point(121, 239);
+            this.button_bold.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_bold.Name = "button_bold";
-            this.button_bold.Size = new System.Drawing.Size(30, 34);
+            this.button_bold.Size = new System.Drawing.Size(40, 42);
             this.button_bold.TabIndex = 8;
             this.button_bold.Text = "B";
             this.button_bold.UseVisualStyleBackColor = true;
@@ -144,9 +147,10 @@
             // 
             // button_previous3
             // 
-            this.button_previous3.Location = new System.Drawing.Point(16, 342);
+            this.button_previous3.Location = new System.Drawing.Point(21, 421);
+            this.button_previous3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_previous3.Name = "button_previous3";
-            this.button_previous3.Size = new System.Drawing.Size(75, 23);
+            this.button_previous3.Size = new System.Drawing.Size(100, 28);
             this.button_previous3.TabIndex = 11;
             this.button_previous3.Text = "Previous";
             this.button_previous3.UseVisualStyleBackColor = true;
@@ -154,9 +158,10 @@
             // 
             // button_next3
             // 
-            this.button_next3.Location = new System.Drawing.Point(462, 342);
+            this.button_next3.Location = new System.Drawing.Point(616, 421);
+            this.button_next3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_next3.Name = "button_next3";
-            this.button_next3.Size = new System.Drawing.Size(75, 23);
+            this.button_next3.Size = new System.Drawing.Size(100, 28);
             this.button_next3.TabIndex = 10;
             this.button_next3.Text = "Next";
             this.button_next3.UseVisualStyleBackColor = true;
@@ -166,12 +171,14 @@
             // 
             this.groupBox_images.Controls.Add(this.button_next3);
             this.groupBox_images.Controls.Add(this.button_previous3);
-            this.groupBox_images.Location = new System.Drawing.Point(12, 12);
+            this.groupBox_images.Location = new System.Drawing.Point(16, 15);
+            this.groupBox_images.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox_images.Name = "groupBox_images";
-            this.groupBox_images.Size = new System.Drawing.Size(555, 383);
+            this.groupBox_images.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox_images.Size = new System.Drawing.Size(740, 471);
             this.groupBox_images.TabIndex = 4;
             this.groupBox_images.TabStop = false;
-            this.groupBox_images.Text = "Image Selection";
+            this.groupBox_images.Text = " v";
             // 
             // groupBox_output
             // 
@@ -183,9 +190,11 @@
             this.groupBox_output.Controls.Add(this.label_output_name);
             this.groupBox_output.Controls.Add(this.label_output_folder);
             this.groupBox_output.Controls.Add(this.button_browse_output_folder);
-            this.groupBox_output.Location = new System.Drawing.Point(12, 12);
+            this.groupBox_output.Location = new System.Drawing.Point(16, 15);
+            this.groupBox_output.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox_output.Name = "groupBox_output";
-            this.groupBox_output.Size = new System.Drawing.Size(555, 383);
+            this.groupBox_output.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox_output.Size = new System.Drawing.Size(740, 471);
             this.groupBox_output.TabIndex = 4;
             this.groupBox_output.TabStop = false;
             this.groupBox_output.Text = "Output File";
@@ -194,9 +203,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label1.Location = new System.Drawing.Point(41, 45);
+            this.label1.Location = new System.Drawing.Point(55, 55);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(460, 72);
+            this.label1.Size = new System.Drawing.Size(584, 87);
             this.label1.TabIndex = 7;
             this.label1.Text = "Here you will decide on your powerpoint slide\'s name\r\nand where to export it. Hit" +
     " Create to create and export\r\nyour PowerPoint.";
@@ -204,9 +214,10 @@
             // 
             // button_create
             // 
-            this.button_create.Location = new System.Drawing.Point(462, 342);
+            this.button_create.Location = new System.Drawing.Point(616, 421);
+            this.button_create.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_create.Name = "button_create";
-            this.button_create.Size = new System.Drawing.Size(75, 23);
+            this.button_create.Size = new System.Drawing.Size(100, 28);
             this.button_create.TabIndex = 6;
             this.button_create.Text = "Create";
             this.button_create.UseVisualStyleBackColor = true;
@@ -214,9 +225,10 @@
             // 
             // button_previous4
             // 
-            this.button_previous4.Location = new System.Drawing.Point(16, 342);
+            this.button_previous4.Location = new System.Drawing.Point(21, 421);
+            this.button_previous4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_previous4.Name = "button_previous4";
-            this.button_previous4.Size = new System.Drawing.Size(75, 23);
+            this.button_previous4.Size = new System.Drawing.Size(100, 28);
             this.button_previous4.TabIndex = 5;
             this.button_previous4.Text = "Previous";
             this.button_previous4.UseVisualStyleBackColor = true;
@@ -224,41 +236,46 @@
             // 
             // textBox_output_folder
             // 
-            this.textBox_output_folder.Location = new System.Drawing.Point(102, 216);
+            this.textBox_output_folder.Location = new System.Drawing.Point(136, 266);
+            this.textBox_output_folder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox_output_folder.Name = "textBox_output_folder";
-            this.textBox_output_folder.Size = new System.Drawing.Size(354, 20);
+            this.textBox_output_folder.Size = new System.Drawing.Size(471, 22);
             this.textBox_output_folder.TabIndex = 4;
             // 
             // textBox_output_name
             // 
-            this.textBox_output_name.Location = new System.Drawing.Point(102, 129);
+            this.textBox_output_name.Location = new System.Drawing.Point(136, 159);
+            this.textBox_output_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox_output_name.Name = "textBox_output_name";
-            this.textBox_output_name.Size = new System.Drawing.Size(354, 20);
+            this.textBox_output_name.Size = new System.Drawing.Size(471, 22);
             this.textBox_output_name.TabIndex = 3;
             // 
             // label_output_name
             // 
             this.label_output_name.AutoSize = true;
-            this.label_output_name.Location = new System.Drawing.Point(61, 132);
+            this.label_output_name.Location = new System.Drawing.Point(81, 162);
+            this.label_output_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_output_name.Name = "label_output_name";
-            this.label_output_name.Size = new System.Drawing.Size(41, 13);
+            this.label_output_name.Size = new System.Drawing.Size(53, 17);
             this.label_output_name.TabIndex = 2;
             this.label_output_name.Text = "Name: ";
             // 
             // label_output_folder
             // 
             this.label_output_folder.AutoSize = true;
-            this.label_output_folder.Location = new System.Drawing.Point(22, 219);
+            this.label_output_folder.Location = new System.Drawing.Point(29, 270);
+            this.label_output_folder.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_output_folder.Name = "label_output_folder";
-            this.label_output_folder.Size = new System.Drawing.Size(74, 13);
+            this.label_output_folder.Size = new System.Drawing.Size(99, 17);
             this.label_output_folder.TabIndex = 1;
             this.label_output_folder.Text = "Output Folder:";
             // 
             // button_browse_output_folder
             // 
-            this.button_browse_output_folder.Location = new System.Drawing.Point(462, 214);
+            this.button_browse_output_folder.Location = new System.Drawing.Point(616, 263);
+            this.button_browse_output_folder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_browse_output_folder.Name = "button_browse_output_folder";
-            this.button_browse_output_folder.Size = new System.Drawing.Size(75, 23);
+            this.button_browse_output_folder.Size = new System.Drawing.Size(100, 28);
             this.button_browse_output_folder.TabIndex = 0;
             this.button_browse_output_folder.Text = "Browse...";
             this.button_browse_output_folder.UseVisualStyleBackColor = true;
@@ -268,9 +285,11 @@
             // 
             this.groupBox_welcome.Controls.Add(this.label_welcome_msg);
             this.groupBox_welcome.Controls.Add(this.button_next1);
-            this.groupBox_welcome.Location = new System.Drawing.Point(12, 12);
+            this.groupBox_welcome.Location = new System.Drawing.Point(16, 15);
+            this.groupBox_welcome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox_welcome.Name = "groupBox_welcome";
-            this.groupBox_welcome.Size = new System.Drawing.Size(555, 383);
+            this.groupBox_welcome.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox_welcome.Size = new System.Drawing.Size(740, 471);
             this.groupBox_welcome.TabIndex = 4;
             this.groupBox_welcome.TabStop = false;
             this.groupBox_welcome.Text = "Welcome";
@@ -279,9 +298,10 @@
             // 
             this.label_welcome_msg.AutoSize = true;
             this.label_welcome_msg.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label_welcome_msg.Location = new System.Drawing.Point(70, 119);
+            this.label_welcome_msg.Location = new System.Drawing.Point(93, 146);
+            this.label_welcome_msg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_welcome_msg.Name = "label_welcome_msg";
-            this.label_welcome_msg.Size = new System.Drawing.Size(446, 93);
+            this.label_welcome_msg.Size = new System.Drawing.Size(559, 117);
             this.label_welcome_msg.TabIndex = 6;
             this.label_welcome_msg.Text = "Welcome to PowerPoint Generator. \r\nUsing this tool, you will generate\r\n a PowerPo" +
     "int Slide";
@@ -289,9 +309,10 @@
             // 
             // button_next1
             // 
-            this.button_next1.Location = new System.Drawing.Point(462, 342);
+            this.button_next1.Location = new System.Drawing.Point(616, 421);
+            this.button_next1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_next1.Name = "button_next1";
-            this.button_next1.Size = new System.Drawing.Size(75, 23);
+            this.button_next1.Size = new System.Drawing.Size(100, 28);
             this.button_next1.TabIndex = 5;
             this.button_next1.Text = "Next";
             this.button_next1.UseVisualStyleBackColor = true;
@@ -299,14 +320,14 @@
             // 
             // Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 407);
+            this.ClientSize = new System.Drawing.Size(772, 501);
             this.Controls.Add(this.groupBox_images);
             this.Controls.Add(this.groupBox_welcome);
             this.Controls.Add(this.groupBox_text);
             this.Controls.Add(this.groupBox_output);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form";
             this.Text = "PowerPoint Generator";
             this.groupBox_text.ResumeLayout(false);
