@@ -16,12 +16,13 @@ namespace PPT_Generate
         {
 
             Microsoft.Office.Interop.PowerPoint.Application pptApplication = new Microsoft.Office.Interop.PowerPoint.Application();
+
             Microsoft.Office.Interop.PowerPoint.Slides slides;
             Microsoft.Office.Interop.PowerPoint._Slide slide;
             Microsoft.Office.Interop.PowerPoint.TextRange objText;
 
             // Create the Presentation File
-            Presentation pptPresentation = pptApplication.Presentations.Add(MsoTriState.msoTrue);
+            Presentation pptPresentation = pptApplication.Presentations.Add(MsoTriState.msoFalse);
 
             Microsoft.Office.Interop.PowerPoint.CustomLayout customLayout = pptPresentation.SlideMaster.CustomLayouts[Microsoft.Office.Interop.PowerPoint.PpSlideLayout.ppLayoutText];
 
@@ -36,7 +37,9 @@ namespace PPT_Generate
             objText.Font.Size = 32;
 
             Clipboard.SetData(DataFormats.Rtf, text);
-            slide.Shapes[2].TextFrame.TextRange.PasteSpecial(PpPasteDataType.ppPasteRTF);
+            Microsoft.Office.Interop.PowerPoint.TextFrame tf = slide.Shapes[2].TextFrame;
+            Microsoft.Office.Interop.PowerPoint.TextRange tr = tf.TextRange;
+            tr.PasteSpecial(PpPasteDataType.ppPasteRTF);
 
 
             //fix
