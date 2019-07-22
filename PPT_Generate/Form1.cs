@@ -40,7 +40,9 @@ namespace PPT_Generate
         {
             string key = "35e097947bfd47c690722ee36f91b353";
             Images imageResults = null;
-            string searchTerm = this.textBox_title + "";//fix
+            string bold_words = bolded_words();
+            string searchTerm = this.textBox_title.Text + " " + bold_words;
+            Console.WriteLine(searchTerm);
             var client = new ImageSearchClient(new ApiKeyServiceClientCredentials(key));
             imageResults = client.Images.SearchAsync(query: searchTerm).Result;
             if (imageResults == null)
@@ -123,6 +125,11 @@ namespace PPT_Generate
             this.textBox_text.SelectionFont = new System.Drawing.Font("Microsoft Sans Serif", 9, FontStyle.Bold);
         }
 
+        private void Button_unbold_Click(object sender, EventArgs e)
+        {
+            this.textBox_text.SelectionFont = new System.Drawing.Font("Microsoft Sans Serif", 9);
+        }
+
         private void Button_browse_output_folder_Click(object sender, EventArgs e)
         {
             using (var fbd = new FolderBrowserDialog())
@@ -142,7 +149,7 @@ namespace PPT_Generate
             {
                 pic_num_selected.Remove(1);
             }
-            else if (pic_num_selected.Count() > 3)
+            else if (pic_num_selected.Count() > 2)
             {
                 MessageBox.Show("You can only select upto 3 images!");
             }
@@ -159,7 +166,7 @@ namespace PPT_Generate
             {
                 pic_num_selected.Remove(2);
             }
-            else if (pic_num_selected.Count() > 3)
+            else if (pic_num_selected.Count() > 2)
             {
                 MessageBox.Show("You can only select upto 3 images!");
             }
@@ -176,7 +183,7 @@ namespace PPT_Generate
             {
                 pic_num_selected.Remove(3);
             }
-            else if (pic_num_selected.Count() > 3)
+            else if (pic_num_selected.Count() > 2)
             {
                 MessageBox.Show("You can only select upto 3 images!");
             }
@@ -193,7 +200,7 @@ namespace PPT_Generate
             {
                 pic_num_selected.Remove(4);
             }
-            else if (pic_num_selected.Count() > 3)
+            else if (pic_num_selected.Count() > 2)
             {
                 MessageBox.Show("You can only select upto 3 images!");
             }
@@ -210,7 +217,7 @@ namespace PPT_Generate
             {
                 pic_num_selected.Remove(5);
             }
-            else if (pic_num_selected.Count() > 3)
+            else if (pic_num_selected.Count() > 2)
             {
                 MessageBox.Show("You can only select upto 3 images!");
             }
@@ -227,7 +234,7 @@ namespace PPT_Generate
             {
                 pic_num_selected.Remove(6);
             }
-            else if (pic_num_selected.Count() > 3)
+            else if (pic_num_selected.Count() > 2)
             {
                 MessageBox.Show("You can only select upto 3 images!");
             }
@@ -244,7 +251,7 @@ namespace PPT_Generate
             {
                 pic_num_selected.Remove(7);
             }
-            else if (pic_num_selected.Count() > 3)
+            else if (pic_num_selected.Count() > 2)
             {
                 MessageBox.Show("You can only select upto 3 images!");
             }
@@ -261,7 +268,7 @@ namespace PPT_Generate
             {
                 pic_num_selected.Remove(8);
             }
-            else if (pic_num_selected.Count() > 3)
+            else if (pic_num_selected.Count() > 2)
             {
                 MessageBox.Show("You can only select upto 3 images!");
             }
@@ -278,7 +285,7 @@ namespace PPT_Generate
             {
                 pic_num_selected.Remove(9);
             }
-            else if (pic_num_selected.Count() > 3)
+            else if (pic_num_selected.Count() > 2)
             {
                 MessageBox.Show("You can only select upto 3 images!");
             }
@@ -293,8 +300,50 @@ namespace PPT_Generate
             this.label_sel_pic_num.Text = "";
             foreach (int index in pic_num_selected)
             {
-                this.label_sel_pic_num.Text = index.ToString() + " ";
+                this.label_sel_pic_num.Text += index.ToString() + " ";
             }
+        }
+        private string bolded_words()
+        {
+            string bolded_words = "";
+            Console.WriteLine(this.textBox_text.Rtf);
+            string str = this.textBox_text.Rtf;
+            int StartIndex = str.IndexOf(@"\b");
+            Console.WriteLine(StartIndex);
+            while (StartIndex != -1)
+            {
+                StartIndex = str.IndexOf(' ', StartIndex) + 1;
+                Console.WriteLine("updated start" + StartIndex);
+                int endIndex = str.IndexOf(@"\b0", StartIndex) - 1;
+                if (endIndex == -1)
+                {
+                    endIndex = str.Length - 1;
+                    break;
+                }
+                Console.WriteLine("end" + endIndex);
+                bolded_words += (str.Substring(StartIndex, endIndex - StartIndex) + " ");
+                StartIndex = str.IndexOf(@"\b", endIndex + 3);
+                Console.WriteLine("next\n" + StartIndex);
+            }
+
+            /*
+            string[] words = this.textBox_text.Rtf.Split(new char[] {' ', '\t', '\n'}, StringSplitOptions.RemoveEmptyEntries);
+            bool bolded = false;
+            for (int index = 0; index < words.Count(); index++)
+            {
+                Console.WriteLine(words[index]);
+                if (bolded)
+                {
+                    int end = words[index].IndexOf(@"\b0");
+                    bolded_words += (words[index].Substring(0, end) + " ");
+                }
+                if (words[index].Contains(@"\b"))
+                {
+                    bolded = true;
+                    continue;
+                }
+            }*/
+            return bolded_words;
         }
     }
 }
