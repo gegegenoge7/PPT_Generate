@@ -89,6 +89,7 @@ namespace PPT_Generate
             foreach(int i in pic_num_selected)
             {
                 PPTimages[count] = ImageResult_url[i-1];
+                count++;
             }
             outputName = this.textBox_output_name.Text;
             outputFolder = this.textBox_output_folder.Text;

@@ -165,6 +165,7 @@
             // 
             // groupBox_images
             // 
+            resources.ApplyResources(this.groupBox_images, "groupBox_images");
             this.groupBox_images.Controls.Add(this.label_img9);
             this.groupBox_images.Controls.Add(this.label_img8);
             this.groupBox_images.Controls.Add(this.label_img7);
@@ -188,7 +189,6 @@
             this.groupBox_images.Controls.Add(this.label_instruction_images);
             this.groupBox_images.Controls.Add(this.button_next3);
             this.groupBox_images.Controls.Add(this.button_previous3);
-            resources.ApplyResources(this.groupBox_images, "groupBox_images");
             this.groupBox_images.Name = "groupBox_images";
             this.groupBox_images.TabStop = false;
             // 

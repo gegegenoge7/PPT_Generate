@@ -42,12 +42,10 @@ namespace PPT_Generate
             tr.PasteSpecial(PpPasteDataType.ppPasteRTF);
 
 
-            //fix
-            
+            Microsoft.Office.Interop.PowerPoint.Shape shape = slide.Shapes[2];
             int i = 1;
             foreach (string image in imageLinks)
             {
-                Microsoft.Office.Interop.PowerPoint.Shape shape = slide.Shapes[3];
                 if (i == 1)
                 {
                     slide.Shapes.AddPicture(image, Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoTrue, shape.Left + (shape.Width / 2), shape.Top, shape.Width / 2, shape.Height / 2);
