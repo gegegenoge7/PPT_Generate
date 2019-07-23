@@ -15,15 +15,14 @@ namespace PPT_Generate
         public Generate_PPT(string Title, string text, string FullOutputPath, string[] imageLinks)
         {
 
+            //Initialize variables
             Microsoft.Office.Interop.PowerPoint.Application pptApplication = new Microsoft.Office.Interop.PowerPoint.Application();
-
             Microsoft.Office.Interop.PowerPoint.Slides slides;
             Microsoft.Office.Interop.PowerPoint._Slide slide;
             Microsoft.Office.Interop.PowerPoint.TextRange objText;
 
-            // Create the Presentation File
+            // Create the Presentation File - msoFalse to hide presentation
             Presentation pptPresentation = pptApplication.Presentations.Add(MsoTriState.msoFalse);
-
             Microsoft.Office.Interop.PowerPoint.CustomLayout customLayout = pptPresentation.SlideMaster.CustomLayouts[Microsoft.Office.Interop.PowerPoint.PpSlideLayout.ppLayoutText];
 
             // Create new Slide
@@ -36,12 +35,13 @@ namespace PPT_Generate
             objText.Font.Name = "Arial";
             objText.Font.Size = 32;
 
+            // Add text
             Clipboard.SetData(DataFormats.Rtf, text);
             Microsoft.Office.Interop.PowerPoint.TextFrame tf = slide.Shapes[2].TextFrame;
             Microsoft.Office.Interop.PowerPoint.TextRange tr = tf.TextRange;
             tr.PasteSpecial(PpPasteDataType.ppPasteRTF);
 
-
+            //Add images
             Microsoft.Office.Interop.PowerPoint.Shape shape = slide.Shapes[2];
             int i = 1;
             foreach (string image in imageLinks)
@@ -61,6 +61,8 @@ namespace PPT_Generate
                 }
                 i++;
             }
+
+            //save PPT and close
             pptPresentation.SaveAs(FullOutputPath, Microsoft.Office.Interop.PowerPoint.PpSaveAsFileType.ppSaveAsDefault, MsoTriState.msoTrue);
             pptPresentation.Close();
             pptApplication.Quit();

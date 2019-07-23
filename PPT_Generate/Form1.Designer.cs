@@ -451,11 +451,6 @@
         private System.Windows.Forms.Label label_output_folder;
         private System.Windows.Forms.Button button_browse_output_folder;
         private System.Windows.Forms.Label label1;
-        private string PPTtext;
-        private string PPTtitle;
-        private string[] PPTimages;
-        private string outputFolder;
-        private string outputName;
         private System.Windows.Forms.Label label_instruction_images;
         private System.Windows.Forms.Label label_sel_pic;
         private System.Windows.Forms.PictureBox pictureBox9;
@@ -478,6 +473,11 @@
         private System.Windows.Forms.Label label_img2;
         private System.Windows.Forms.Label label_img1;
         private System.Windows.Forms.Button button_unbold;
+        private string PPTtext;
+        private string PPTtitle;
+        private string[] PPTimages;
+        private string outputFolder;
+        private string outputName;
     }
 }
 
